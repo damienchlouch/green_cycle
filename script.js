@@ -2,10 +2,12 @@ let cssModal = `
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
+    top : 0;
+    left : 0;
     width: 100%;
     height: 100vh;
-    background-color: grey;
+    background-color: rgba(54, 54, 54, 0.192);;
 `;
 
 document.querySelectorAll("[modal]").forEach(element => {
@@ -25,13 +27,13 @@ function toggleModal(e) {
         modal.childNodes[modal.childNodes.length - 1]
         modal.style.cssText = cssModal
         modal.childNodes[1].style.display = "block"
-        currentButton.style.display = "none"
+        modal.parentNode.appendChild(currentButton)
     } else if(e.target.getAttribute("modal") != null) {
         toggle = !toggle
         const modal = e.target
         modal.style.cssText = ""
         modal.childNodes[1].style.display = "none"
-        currentButton.style.display = "block"
+        modal.appendChild(currentButton)
     }
 
 }
