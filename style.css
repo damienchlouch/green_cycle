@@ -8,15 +8,21 @@ body{
     overflow-x: hidden;
 }
 
+nav{
+    position: sticky;
+    top: 0;
+}
+
 nav ul{
     margin: auto;
-    padding: 50px 50px 0 0;
+    padding: 50px 50px 0px 0px;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     font-weight: lighter;
     font-style: italic;
+    background-color: rgba(255, 255, 255, 0.568);
 }
 
 
@@ -29,9 +35,13 @@ nav ul a {
     border: solid 1px #3AAA35;
     border-radius: 7px;
     text-align: center;
+    position: sticky;
 }
 
-
+nav ul a:hover {
+    background-color: #3AAA35;
+    color: white;
+}
 nav .green_line{
     width: 70%;
     margin: auto;
@@ -138,11 +148,11 @@ header .container .leftside p{
 }
 
 #page_3 svg{
-    width: 65%;
+    width: 90%;
 }
 
-#page_3 ul{
-    width: 25%;
+.carto{
+    width: 50%;
 }
 
 #page_3 h1{
@@ -155,6 +165,7 @@ header .container .leftside p{
 #page_3 .liste_stations{
     padding-top: 50px;
     display: flex;
+    justify-content: space-between;
 }
 
 .liste_stations ul{
@@ -164,7 +175,7 @@ header .container .leftside p{
 
  .liste_stations li{
      font-size: 19px;
-    list-style: radial-gradient(circle, rgba(58,170,53,1) 0%, rgba(58,170,53,1) 75%, rgba(0,0,0,0) 75%);;
+    list-style: radial-gradient(circle, rgba(58,170,53,1) 0%, rgba(58,170,53,1) 75%, rgba(0,0,0,0) 75%);
 } 
 
 #page_3 .container{
@@ -307,6 +318,23 @@ footer .container{
 .suivez_nous img{
     padding-top: 20px;
 }
+
+/*------------------POPUP------------------------*/
+.cycliste {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.wholepop form input{
+    width: 80%;
+    height: 25px;
+}
+
+.wholepop form .btn_connex{
+    width: 12px;
+}
 /*------------------------------------------*/
 
 @media screen and (max-width:1100px) {
@@ -327,9 +355,14 @@ footer .container{
         padding: 0;
     }
     nav{
+        top: 0;
         width: 100%;
         height: 75px;
         background-color: #282727;
+    }
+
+    nav .green_line{
+       display: none;
     }
 
     header{
@@ -365,11 +398,16 @@ footer .container{
     }
 
     .menu_resp{
-        padding: 5px;
+        /* padding: 5px; */
         height: 60px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-bottom: 5px;
+    }
+
+    .menu_resp img{
+        padding: 20px 20px 0 0;
     }
 
     #page_2 .container{
@@ -401,15 +439,13 @@ footer .container{
         align-items: center;
     }
     
-    #page_3 svg{
-        width: 95%;
-    }
 
     #page_3 ul{
-        width: 90%;
-        text-align: center;
+        text-align: left;
     }
-
+    .carto{
+        width: 90%;
+    }
     .actu{
         display: flex;
         flex-direction: column;
@@ -501,7 +537,8 @@ footer .container{
 .otot{
     width: 500px;
     height: 500px;
-    background-color: #3AAA35;
+    background-color: #3baa358a;
     color : white;
     display: none;
+    border-radius: 20%;
 } 
