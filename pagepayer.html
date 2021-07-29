@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagepayer.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+    </style>
+
+    <title>Paiement</title>
+</head>
+
+<body>
+    <div class="suite">
+        <figure class="circle"></figure>
+
+        <hr>
+        <figure class="circle"></figure>
+
+        <hr class="line">
+        <figure class="circle circle1"></figure>
+    </div>
+
+
+
+    <div class="formulairepaie">
+        <img src="img/Banniere.png" alt="">
+        <form action="">
+
+            <label for="post">Formule</label>
+            <select name="formule" id="formule">
+                <option value="MONOCYCLE" selected>MONOCYCLE</option>
+                <option value="GREEN CYCLE" selected>GREEN CYCLE</option>
+                <option value="BICYCLE" selected>BICYCLE</option>
+            </select>
+
+            <div class="nom">
+                <label for="post">Nom</label>
+                <label class="droite" for="post">Prénom</label>
+            </div>
+
+            <div class="prénom">
+                <input type="nom">
+                <input type="prenom">
+            </div>
+
+            <label for="number">Numéro de carte</label>
+            <input class="grande" type="text" placeholder="5456 / 6584 / 8421 / ****">
+
+            <div class="exp">
+                <label for="post">EXP</label>
+                <label class="droite" for="post">CVC</label>
+            </div>
+
+            <div class="CVC">
+                <input type="text" placeholder="MM/YYYY">
+                <input type="text" placeholder="CVC">
+            </div>
+        </form>
+
+        <button class="buttonpayer">Payer</button>
+    </div>
+</body>
+
+</html>

@@ -5,12 +5,13 @@
 
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    /* overflow-x: hidden; */
+    
 }
 
 nav{
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 nav ul{
@@ -22,7 +23,6 @@ nav ul{
     align-items: flex-start;
     font-weight: lighter;
     font-style: italic;
-    /* background-color: white; */
 }
 
 
@@ -36,7 +36,16 @@ nav ul a {
     border-radius: 7px;
     text-align: center;
     position: sticky;
-    background-color: rgba(255, 255, 255, 0.801);
+    background-color: rgb(255, 255, 255);
+}
+
+.btn_ret{
+    border: 0;
+    background: none;
+}
+.btn_ret:hover{
+    background: none;
+    border: 0;
 }
 
 nav ul a:hover {
@@ -65,6 +74,13 @@ header{
 .content_page1{
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+
+.titre_rond{
+    top: -35px;px;
+    right: 42px;
+    position: absolute;
 }
 
 header .container .leftside{
@@ -81,6 +97,7 @@ h1{
 
 h2{
     font-weight:normal;
+    font-style: italic;
     padding-bottom: 20px;
 }
 
@@ -93,6 +110,7 @@ header .container .leftside p{
 }
 
 #page_2{
+    background-image: url(img/fond_trame.png);
     background-color: #FFF5E9;
     
 }
@@ -108,13 +126,36 @@ header .container .leftside p{
     padding-top: 50px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding-bottom: 50px;
 }
 
+.text1{
+    padding-bottom: 20px;
+}
+
+.btn_savoir_plus:hover{
+    background-color: #87878654;
+    border-radius: 10px;
+}
+
 #page_2 .container .descr_offre a{
+    margin: auto;
+    width: 70%;
+    font-style: italic;
     text-decoration: none;
     color: #878786;
+    border: solid 1px #878786;
+    border-radius: 10px;
+}
+
+#page_2 .container .descr_offre3 a{
+    margin: auto;
+    width: 70%;
+    font-style: italic;
+    text-decoration: none;
+    color: #878786;
+    border: solid 1px #878786;
+    border-radius: 10px;
 }
 
 .descr_offre{
@@ -123,19 +164,59 @@ header .container .leftside p{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 500px;
     padding-bottom: 50px;
+    border-radius: 25px;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.288));
+}
+
+.descr_offre3{
+    width: 32%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    border-radius: 25px;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.288));
+    position: relative;
+
+}
+
+.Bandeau {
+    color: #FFF5E9;
+    text-align: center;
+    font-size: 18px;
+    position: absolute;
+    top : 28px;
+    right: -47px;
+    transform: rotate(45deg);
+    height:0;
+    width: 100px;
+    border-bottom: 50px solid #389B48;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.Bandeau p {
+    padding-top: 15px
 }
 
 .logo_offre{
     margin: auto;
-    width: 92px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .descr_offre p{
     margin: auto;
     text-align: center;
-    width: 80%;
+    width: 90%;
+}
+
+.descr_offre3 p{
+    margin: auto;
+    text-align: center;
+    width: 90%;
 }
 
 #page_2 .green_line{
@@ -153,8 +234,8 @@ header .container .leftside p{
     position: absolute;
     width: 30px;
     height: 30px;
-    left:29%;
-    top: 55%;
+    left: 46px;px;
+    top: 150px;
     border-radius: 25px;
     background-color:#3AAA35;
     display: none;
@@ -164,8 +245,8 @@ header .container .leftside p{
     position: absolute;
     width: 30px;
     height: 30px;
-    left: 30%;
-    top: 62%;
+    left: 73px;
+    top: 182px;
     border-radius: 25px;
     background-color:#3AAA35;
     display: none;
@@ -175,8 +256,8 @@ header .container .leftside p{
     position: absolute;
     width: 30px;
     height: 30px;
-    left: 32%;
-    top: 70%;
+    left: 110px;
+    top: 239px;
     border-radius: 25px;
     background-color:#3AAA35;
     display: none;
@@ -186,8 +267,8 @@ header .container .leftside p{
     position: absolute;
     width: 30px;
     height: 30px;
-    left: 35%;
-    top: 70%;
+    left: 185px;
+    top: 239px;
     border-radius: 25px;
     background-color:#3AAA35;
     display: none;
@@ -196,8 +277,8 @@ header .container .leftside p{
     position: absolute;
     width: 30px;
     height: 30px;
-    left: 34%;
-    top: 61%;
+    left: 151px;
+    top: 175px;
     border-radius: 25px;
     background-color:#3AAA35;
     display: none;
@@ -207,8 +288,8 @@ header .container .leftside p{
     position: absolute;
     width: 30px;
     height: 30px;
-    left: 39.5%;
-    top: 61%;
+    left: 269px;
+    top: 189px;
     border-radius: 25px;
     background-color:#3AAA35;
     display: none;
@@ -262,7 +343,6 @@ header .container .leftside p{
 }
 
 .carto{
-    position: relative;
     width: 50%;
 }
 
@@ -273,10 +353,12 @@ header .container .leftside p{
 
 }
 
+
 #page_3 .liste_stations{
     padding-top: 50px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .liste_stations ul{
@@ -309,6 +391,7 @@ header .container .leftside p{
 }
 
 #page_4{
+    background-image: url(img/fond_trame.png);
     background-color: #FFF5E9;
     padding-bottom: 50px;
 }
@@ -321,6 +404,10 @@ header .container .leftside p{
 .groupe_actu{
     display: flex;
     flex-direction: column;
+}
+
+a{
+    text-decoration: none;
 }
 
 .img_news{
@@ -344,6 +431,11 @@ header .container .leftside p{
     color: grey;
     border-radius: 5px;
 
+}
+
+.btn_plus_savoir:hover{
+    color: white;
+    background-color: #878786;
 }
 
 #page_5 h1{
@@ -424,6 +516,7 @@ footer .container{
 
 .btn_connect{
     color: #3AAA35;
+    text-decoration: underline;
 }
 
 .suivez_nous img{
@@ -433,20 +526,50 @@ footer .container{
 /*------------------POPUP------------------------*/
 .cycliste {
     margin: auto;
-    display: flex;
-    justify-content: center;
+    padding: 20px;
 
+}
+
+.pop{
+    padding: 10px;
 }
 
 .wholepop form input{
     width: 80%;
     height: 25px;
+    background: none;
+    text-align: center;
+    color: #878786;
+    font-style: italic;
 }
 
-.wholepop form .btn_connex{
-    width: 12px;
+.wholepop form input:last-child{
+    width: 50%;
+    padding-bottom: 25px;
 }
-/*------------------------------------------*/
+
+.btn_connex{
+    width: 120px;
+    padding: 10px;
+    border-radius: 12px;
+    background: none;
+    border: solid 1px #3AAA35;
+}
+#souvenir{
+    color: #878786;
+}
+.check{
+    width: 80%;
+}
+
+#souvenir{
+    text-align: left;
+    width: 20px;
+    height: 14px;
+}
+
+
+/*------------------------------------------------------------------------------*/
 
 @media screen and (max-width:1100px) {
     .container{
@@ -479,6 +602,10 @@ footer .container{
 
     header{
         width: 100%;
+    }
+
+    .titre_rond{
+        display: none;
     }
 
     .content_page1 h1{
@@ -541,6 +668,16 @@ footer .container{
         margin: 15px;
     }
 
+    .descr_offre3{
+        width: 80%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 500px;
+        margin: 15px;
+    }
+
     #page_3 .liste_stations{
         margin: auto;
         width: 90%;
@@ -572,6 +709,8 @@ footer .container{
     .img_news img{
         width: 100%;
         border-radius: 20px;
+        padding-top: 55px;
+        padding-bottom: 15px;
     }
     .right_side{
         width: 80%;
@@ -648,8 +787,9 @@ footer .container{
 .otot{
     width: 500px;
     height: 500px;
-    background-color: #3baa358a;
+    background-color: rgba(255, 255, 255, 0.76);;
     color : white;
     display: none;
+    border: solid 1px #3AAA35;
     border-radius: 20%;
 } 

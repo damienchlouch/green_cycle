@@ -17,7 +17,7 @@
         </div>
         <ul>
             <div class="logo_green">
-                <img src="img/logo_green.png" alt="logo">
+                <a class="btn_ret" href="#"><img src="img/logo_green.png" alt="logo"></a>
             </div>
             <a href="#">
                 <li>Découverte</li>
@@ -61,14 +61,18 @@
                                     <ellipse cx="151.372" cy="23.9842" rx="4.24408" ry="5.1872" fill="white" />
                                 </svg>
                             </div>
-                            <form>
+                            <form class="pop" action="./pageadmin.html" target="_blank">
                                 <label for="mail" id="email">Mail :</label>
                                 <input type="text" id="email">
                                 <label for="password" id="mdp">Mot de passe :</label>
                                 <input type="password" id="mdp">
-
+                                <div class="check">
+                                    <input type="checkbox" id="souvenir">
+                                    <label for="souvenir" id="souvenir">Se souvenir de moi</label>
+                                    <input class="btn_connex" type="submit" value="CONNEXION">
+                                </div>
                             </form>
-                            <input class="btn_connex" type="submit" value="CONNEXION">
+
                         </div>
                     </div>
                     <li>Adhérents</li>
@@ -92,6 +96,9 @@
                         Fugiat placeat nihil nemo porro et dicta optio reprehenderit vel voluptates delectus? Nam
                         suscipit repudiandae quasi hic! Vero tenetur exercitationem assumenda expedita.</p>
                 </div>
+                <div class="titre_rond">
+                    <img src="img/titre_rond.png" alt="">
+                </div>
                 <img src="img/img_cycle.png" alt="vélo">
             </div>
         </div>
@@ -109,10 +116,14 @@
                 <div class="logo_offre">
                     <img src="img/monocycle.png" alt="logo_mono">
                 </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur fuga id sint sed? Magni provident
-                    consectetur maxime sit ea eius quos facere, soluta placeat dolorum esse aliquam velit molestiae
-                    laboriosam!</p>
-                <a target="blank" href="pageformule.html">
+                <p class="text1">Cette formule EST sans abonnement,<br> Vous ne payez que ce que vous consommez à chaque
+                    trajet dès la première minute !<br><br>
+                    0,75€ la 1ère demi-heure , <br>
+                    0,50€ la deuxième demi-heure<br>
+                    1€ la 3ème demi-heure
+                    puis
+                    2€ par demi-heure supplémentaire.<br><br> Accès au service possible par smartphone.</p>
+                <a target="_blank" href="pageformule.html">
                     <div class="btn_savoir_plus">
                         <p>EN SAVOIR PLUS</p>
                     </div>
@@ -123,26 +134,39 @@
                 <div class="logo_offre">
                     <img src="img/offre_green_cycle.png" alt="logo_mono">
                 </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur fuga id sint sed? Magni provident
-                    consectetur maxime sit ea eius quos facere, soluta placeat dolorum esse aliquam velit molestiae
-                    laboriosam!</p>
-                <a target="blank" href="pageformule.html">
+                <p class="text1">Cette formule EST avec abonnement, <br>vous payez ce que vous consommez
+                    par semaines.
+                    1 an / trajets illimités<br><br>
+                    les 1ère demi-heures sont
+                    OFFERTES !!<br>
+                    0,50€ la deuxième demi-heure,<br><br>
+                    1€ la 3ème demi-heure
+                    puis
+                    2€ par demi-heure supplémentaire.<br><br>Accès au service possible par smartphone.</p>
+                <a target="_blank" href="pageformule.html">
                     <div class="btn_savoir_plus">
                         <p>EN SAVOIR PLUS</p>
                     </div>
                 </a>
             </div>
             <!-------------------------ETIQUETTE 3---------------------->
-            <div class="descr_offre">
+            <div class="descr_offre3">
                 <div class="logo_offre">
                     <img src="img/offre_bicyble.png" alt="logo_mono">
                 </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur fuga id sint sed? Magni provident
-                    consectetur maxime sit ea eius quos facere, soluta placeat dolorum esse aliquam velit molestiae
-                    laboriosam!</p>
-                <a target="blank" href="pageformule.html">
+                <p class="text1"> Cette formule JEUNE est avec abonnement,
+                    1 an / trajets illimités Les 1ère demi-heures sont OFFERTES !!<br><br>
+                    0,50€ la 1ère première demi-heure,
+                    0,30€ la deuxième demi-heure,<br>
+                    0.5€ la 3ème demi-heure
+                    puis
+                    1€ par demi-heure supplémentaire.<br><br><br>Accès au service possible par smartphone.</p>
+                <a target="_blank" href="pageformule.html">
                     <div class="btn_savoir_plus">
                         <p>EN SAVOIR PLUS</p>
+                    </div>
+                    <div class="Bandeau">
+                        <p>- de 26 ans</p>
                     </div>
                 </a>
             </div>
@@ -157,7 +181,7 @@
         <div class="container">
             <div class="liste_stations">
                 <div class="carto">
-                    
+
                     <svg viewBox="0 0 563 404" fill="none" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
                         <rect width="563" height="404" rx="10" fill="url(#pattern0)" />
@@ -180,13 +204,19 @@
                     </svg>
                 </div>
                 <ul classe="stations">
-                    
-                    <li>SAINT GEORGE<div class="cercle1"></div></li>
-                    <li>LE PORT<div class="cercle2"></div></li>
-                    <li>MUMA<div class="cercle3"></div></li>
-                    <li>SOUTHAMPTON<div class="cercle4"></div></li>
-                    <li>HOTEL DE VILLE<div class="cercle5"></div></li>
-                    <li>QUAI COLBERT<div class="cercle6"></div></li>
+
+                    <li>SAINT GEORGE<div class="cercle1"></div>
+                    </li>
+                    <li>LE PORT<div class="cercle2"></div>
+                    </li>
+                    <li>MUMA<div class="cercle3"></div>
+                    </li>
+                    <li>SOUTHAMPTON<div class="cercle4"></div>
+                    </li>
+                    <li>HOTEL DE VILLE<div class="cercle5"></div>
+                    </li>
+                    <li>QUAI COLBERT<div class="cercle6"></div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -226,9 +256,11 @@
                     </div>
                 </div>
             </div>
-            <div class="btn_plus_savoir">
-                <p>+ D'ACTUALITÉS</p>
-            </div>
+            <a target="_blank" href="pageactu.html">
+                <div class="btn_plus_savoir">
+                    <p>+ D'ACTUALITÉS</p>
+                </div>
+            </a>
         </div>
     </div>
     <div id="page_5">

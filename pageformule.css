@@ -6,6 +6,8 @@
 
 body {
     height: 1200px;
+    background-image: url(img/house_green.jpg);
+    background-size: cover;
 }
 
 .Titre h1{
@@ -34,6 +36,8 @@ hr {
     margin-top: 40px;
     width: 80%;
     display: flex;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.288));
+
 }
 .gras {
     font-weight: bolder;
@@ -47,7 +51,7 @@ hr {
 
 .formule1 h1 {
     position : absolute;
-    width: 10%;
+    width: 125px;
     margin-top: 40px;
     padding: 10px 40px;
     font-size: 20px;
@@ -78,14 +82,16 @@ hr {
     font-weight: lighter;
     font-style: italic;
 }
-
+a{
+    text-decoration: none;    
+}
 .button1{
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FFF5E9;
-    margin-top: 20px;
-    width: 241px;
+    /* margin-top: 20px; */
+    width: 90%;
     height: 33px;
     border-radius: 10px;
     background: #389B48;
@@ -93,6 +99,10 @@ hr {
     box-sizing: border-box;
     letter-spacing: 2px;
     font-style: italic;
+    
+}
+.button1:hover{
+    background-color: #389b4865;
 }
 
 .Bandeau {
@@ -112,4 +122,11 @@ hr {
 
 .Bandeau p {
     padding-top: 18px
+}
+
+@media screen and (max-width:1100px) {
+
+    .button1{
+        height: 15%;
+    }
 }
